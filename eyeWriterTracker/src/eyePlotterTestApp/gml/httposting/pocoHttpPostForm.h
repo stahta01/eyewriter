@@ -33,7 +33,7 @@ typedef Poco::Timestamp ofTimestamp;
 
 
 
-class pocoHttpPostForm : public ofxThread
+class pocoHttpPostForm : public ofThread
 {
     public:
         pocoHttpPostForm();
