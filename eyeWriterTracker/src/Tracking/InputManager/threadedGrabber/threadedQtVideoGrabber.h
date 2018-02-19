@@ -2,10 +2,10 @@
 
 #include "ofVideoGrabber.h"
 #include "ofxOpenCv.h"
-#include "ofxThread.h"
+#include "ofThread.h"
 #include "ofEvents.h"
 
-class threadedQtVideoGrabber : public ofVideoGrabber, public ofxThread {
+class threadedQtVideoGrabber : public ofVideoGrabber, public ofThread {
 protected:
 	int pollRate;
 	void threadedFunction() {

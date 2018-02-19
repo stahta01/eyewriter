@@ -11,9 +11,9 @@
 
 #include "ofMain.h"
 #include "buttonState.h"
-#include "ofxVec2f.h"
+#include "ofVec2f.h"
 
-class timePoint : public ofxVec2f{
+class timePoint : public ofVec2f{
 	public:
 		timePoint(float _x, float _y, float _t){
 			x = _x;
@@ -66,7 +66,7 @@ class buttonStateManager{
 			
 			if( ptHistory.size() ){
 				
-				ofxVec2f averagePos = 0.0f;
+				ofVec2f averagePos = 0.0f;
 				
 				float oldestPoint = ptHistory[0].t;
 				if( ofGetElapsedTimef() - oldestPoint <= waitTime){

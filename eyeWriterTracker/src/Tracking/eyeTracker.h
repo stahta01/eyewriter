@@ -4,7 +4,7 @@
 #include "ofMain.h"
 #include "ofxCvGrayscaleAdvanced.h"
 #include "ofxOpenCv.h"
-#include "ofxVectorMath.h"
+#include "ofVectorMath.h"
 #include "eyeFinder.h"
 #include "pupilFinder.h"
 #include "glintFinder.h"

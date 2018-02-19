@@ -8,7 +8,7 @@
 #include "threadedImgSaver.h"
 #include "ofxFileHelper.h"
 #include "ofxXmlSettings.h"
-#include "ofxDirList.h"
+#include "ofFileUtils.h"
 
 class trackingManager {
 	

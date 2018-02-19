@@ -31,7 +31,7 @@
 #include "baseScene.h"
 
 #include "simpleFtpUpload.h"
-#include "ofxDirList.h"
+#include "ofFileUtils.h"
 
 class saverScene : public baseScene{
 
@@ -79,7 +79,7 @@ class saverScene : public baseScene{
 		buttonTrigger saveAndUpload;
 		
 		int whichState;
-		ofxDirList dirList;
+		ofDirectory dirList;
 		
 		int whichGroup;
 		bool showAll;

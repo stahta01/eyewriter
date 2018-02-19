@@ -2,9 +2,9 @@
 #define _THREADED_IMG_SAVER
 
 #include "ofMain.h"
-#include "ofxThread.h"
+#include "ofThread.h"
 
-class threadedImageSaver : public ofxThread{
+class threadedImageSaver : public ofThread{
 
 	public:
 

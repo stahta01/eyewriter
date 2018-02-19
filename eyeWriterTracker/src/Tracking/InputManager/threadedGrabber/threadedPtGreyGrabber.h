@@ -2,12 +2,12 @@
 
 #include "ofxLibdcPtGrey.h"
 #include "ofxOpenCv.h"
-#include "ofxThread.h"
+#include "ofThread.h"
 #include "ofEvents.h"
 
 #define INPUT_FIREFLY_WIDTH 752
 
-class threadedPtGreyGrabber : public ofxLibdcPtGrey, public ofxThread {
+class threadedPtGreyGrabber : public ofxLibdcPtGrey, public ofThread {
 protected:
 	int pollRate;
 	void threadedFunction() {

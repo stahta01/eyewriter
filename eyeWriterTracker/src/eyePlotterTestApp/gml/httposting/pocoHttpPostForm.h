@@ -2,7 +2,7 @@
 #define POCOHTTPPOSTFORM_H
 
 #include "ofMain.h"
-#include "ofxThread.h"
+#include "ofThread.h"
 
 #include "Poco/Net/HTTPClientSession.h"
 #include "Poco/Net/HTTPRequest.h"

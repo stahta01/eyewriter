@@ -4,7 +4,7 @@
 #include "ofMain.h"
 #include "ofxCvGrayscaleAdvanced.h"
 #include "ofxOpenCv.h"
-#include "ofxVectorMath.h"
+#include "ofVectorMath.h"
 #include "EllipseCalcurator.h"
 #include "eyeFinder.h"
 #include "blobResampler.h"
