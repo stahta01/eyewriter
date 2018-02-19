@@ -10,7 +10,6 @@
 				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="bin" />
 				<Option object_output="obj/release" />
-				<Option external_deps="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworks.lib;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
@@ -19,7 +18,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworks.lib" />
 				</Linker>
 			</Target>
 			<Target title="debug">
@@ -34,7 +32,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworksDebug.lib" />
+					<Add library="openFrameworksDebug.lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -96,39 +94,37 @@
 			<Add directory="$(#ofw)/addons/ofxOpenCv/libs/opencv/include/opencv" />
 			<Add directory="$(#ofw)/addons/ofxOpenCv/libs/opencv/include" />
 			<Add directory="$(#ofw)/libs/glew/include" />
+			<Add directory="$(#ofw)/libs/cairo/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/videoInput/lib/win_cb" />
 		</Compiler>
 		<Linker>
-			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib" />
-			<Add option="../../../libs/rtAudio/lib/win_cb/RtAudio.a" />
-			<Add option="../../../libs/quicktime/lib/win_cb/qtmlClient.lib" />
-			<Add option="../../../libs/freetype/lib/win_cb/libfreetype.a" />
-			<Add option="../../../libs/glut/lib/win_cb/libglut.a" />
-			<Add option="../../../libs/videoInput/lib/win_cb/videoInputLib.a" />
-			<Add option="../../../libs/fmodex/lib/win_cb/libfmodex.a" />
-			<Add option="../../../libs/glee/lib/win_cb/GLee.lib" />
-			<Add option="../../../libs/glu/lib/win_cb/glu32.lib" />
-			<Add option="../../../libs/poco/lib/win_cb/libPocoNetmt.a" />
-			<Add option="../../../libs/poco/lib/win_cb/libPocoUtilmt.a" />
-			<Add option="../../../libs/poco/lib/win_cb/libPocoXMLmt.a" />
-			<Add option="../../../libs/poco/lib/win_cb/libPocoFoundationmt.a" />
-			<Add option="src/addons/ofxOpenCv/libs/opencv/lib/win_cb/libcv.a" />
-			<Add option="src/addons/ofxOpenCv/libs/opencv/lib/win_cb/libcxcore.a" />
-			<Add option="../../../addons/ofxOsc/libs/oscpack/lib/win_cb/oscpack.a" />
-			<Add option="-lopengl32" />
-			<Add option="-lglu32" />
-			<Add option="-ldsound" />
-			<Add option="-lwinmm" />
-			<Add option="-ldxguid" />
-			<Add option="-lstrmbase" />
-			<Add option="-lstrmiids" />
-			<Add option="-lz" />
-			<Add option="-luuid" />
-			<Add option="-lole32" />
-			<Add option="-loleaut32" />
-			<Add option="-lsetupapi" />
-			<Add option="-lwsock32" />
-			<Add option="-lws2_32" />
-			<Add option="-lIphlpapi" />
+			<Add library="RtAudio" />
+			<Add library="qtmlClient" />
+			<Add library="libfreetype" />
+			<Add library="libglut" />
+			<Add library="libfmodex" />
+			<Add library="glu32" />
+			<Add library="dsound" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add library="strmiids" />
+			<Add library="uuid" />
+			<Add library="ole32" />
+			<Add library="oleaut32" />
+			<Add library="setupapi" />
+			<Add library="wsock32" />
+			<Add library="ws2_32" />
+			<Add library="Iphlpapi" />
+			<Add directory="$(#ofw)/libs/fmodex/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/FreeImage/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/freetype/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/glu/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/glut/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/openFrameworksCompiled/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/poco/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/quicktime/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/rtAudio/lib/win_cb" />
+			<Add directory="$(#ofw)/libs/videoInput/lib/win_cb" />
 		</Linker>
 		<ExtraCommands>
 			<Add after='xcopy /e /i /y &quot;$(PROJECT_DIR)..\..\..\export\win_cb\*.dll&quot;  &quot;$(PROJECT_DIR)bin&quot;' />
