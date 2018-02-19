@@ -24,8 +24,8 @@ void inputManager::setup(){
 		string movieToLoad = XML.getValue("app:videoFile", "");
 		vidPlayer.loadMovie(movieToLoad);
 		vidPlayer.play();
-		width	= vidPlayer.width;
-		height	= vidPlayer.height;
+		width	= vidPlayer.getWidth();
+		height	= vidPlayer.getHeight();
 		playposition = 0;
 		
 		grayImage = new ofxCvGrayscaleImage;

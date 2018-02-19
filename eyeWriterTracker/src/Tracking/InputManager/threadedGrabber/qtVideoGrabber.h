@@ -10,8 +10,8 @@ class qtVideoGrabber : public baseVideoGrabber  {
 public:
 	void setup(int _width, int _height, bool _bUseTexture = false){
 		vidGrabber.setup(_width, _height, this);
-		width = vidGrabber.width;
-		height = vidGrabber.height;
+		width = vidGrabber.getWidth();
+		height = vidGrabber.getHeight();
 		
 		if (width !=0 || height != 0){
 			colorImg.setUseTexture(bUseTexture);
