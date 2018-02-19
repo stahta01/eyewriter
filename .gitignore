@@ -11,3 +11,8 @@
 # osx noise
 .DS_Store
 profile
+
+# codeblocks noise
+/eyeWriterTracker/*.depend
+/eyeWriterTracker/*.layout
+/eyeWriterTracker/obj/
